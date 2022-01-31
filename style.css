@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: hsl(210, 36%, 96%);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background: white;
+    box-shadow: lightslategray;
+    margin: auto;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: lightslategrey;
+    background: transparent;
+    border-color: transparent;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    color: lightseagreen;
+    transform: rotate(90deg);
+}
+
+.logo {
+    height: 40px;
+}
+
+.links a {
+    color: rgb(12, 15, 19);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.425rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s linear;
+}
+
+.links a:hover {
+    background: hsl(205, 86%, 81%);
+    color: hsla(204, 91%, 26%, 0.76);
+    padding-left: 1.5rem;
+}
+
+.social-media {
+    display: none;
+}
+
+.links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+}
+
+.show-links {
+    height: 10rem;
+}
+
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .links {
+        height: auto;
+        display: flex;
+    }
+    .links a {
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+    .links a:hover {
+        padding: 0;
+        background: transparent;
+    }
+    .social-media {
+        display: flex;
+    }
+    .social-media a {
+        margin: 0 0.5rem;
+        color: hsla(204, 91%, 26%, 0.76);
+        transition: all 0.3s linear;
+    }
+    .social-media a:hover {
+        color: grey;
+    }
+}
